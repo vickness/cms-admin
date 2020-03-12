@@ -135,8 +135,20 @@ export default {
               ],
             },
             {
-              name: 'list.table-list',
-              icon: 'table',
+              name: ' 文章管理',
+              icon: 'bars',
+              path: '/forums',
+              component: './forums',
+            },
+            {
+              name: ' 商品管理',
+              icon: 'ShopOutlined',
+              path: '/list',
+              component: './ListTableList',
+            },
+            {
+              name: ' 分类管理',
+              icon: 'AppstoreOutlined',
               path: '/list',
               component: './ListTableList',
             },
