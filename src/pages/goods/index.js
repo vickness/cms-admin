@@ -2,7 +2,7 @@ import React from 'react';
 
 const MyPage = () => (
 
-  <h2>文章管理</h2>
+  <h2>商品管理</h2>
 
 );
 

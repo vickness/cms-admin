@@ -89,15 +89,9 @@ export default {
   // umi routes: https://umijs.org/zh/guide/router.html
   routes: [
     {
-      path: '/user',
-      component: '../layouts/UserLayout',
-      routes: [
-        {
-          name: 'login',
-          path: '/user/login',
-          component: './user/login',
-        },
-      ],
+      name: 'login',
+      path: '/user/login',
+      component: './user/login',
     },
     {
       path: '/',
@@ -109,30 +103,10 @@ export default {
           authority: ['admin', 'user'],
           routes: [
             {
-              path: '/',
-              redirect: '/welcome',
-            },
-            {
-              path: '/welcome',
-              name: 'welcome',
-              icon: 'smile',
-              component: './Welcome',
-            },
-            {
-              path: '/admin',
-              name: 'admin',
-              icon: 'crown',
-              component: './Admin',
-              authority: ['admin'],
-              routes: [
-                {
-                  path: '/admin/sub-page',
-                  name: 'sub-page',
-                  icon: 'smile',
-                  component: './Welcome',
-                  authority: ['admin'],
-                },
-              ],
+              name: ' 用户管理',
+              icon: 'user',
+              path: '/users',
+              component: './users',
             },
             {
               name: ' 文章管理',
@@ -143,11 +117,17 @@ export default {
             {
               name: ' 商品管理',
               icon: 'ShopOutlined',
-              path: '/list',
-              component: './ListTableList',
+              path: '/goods',
+              component: './goods',
             },
             {
               name: ' 分类管理',
+              icon: 'AppstoreOutlined',
+              path: '/cates',
+              component: './cates',
+            },
+            {
+              name: ' 列表',
               icon: 'AppstoreOutlined',
               path: '/list',
               component: './ListTableList',
